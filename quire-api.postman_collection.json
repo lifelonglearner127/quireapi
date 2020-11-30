@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "1a9a90c4-2a48-4ff7-bc8a-28487af2e9aa",
+		"name": "quire-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjE4MDI2OSwibmJmIjoxNjAyMTgwMjY5LCJleHAiOjE2MDI3ODUwNjksImRhdGEiOnsidXNlciI6eyJpZCI6NX19fQ.xOMnnIa5gRTP4zjz1ipFQC4tVL51sZXgcPac4tf52bI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/jwt-auth/v1/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "demoadmin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "demoadmin2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "quireapi",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "$1bgPp1%HaujF%yQcP\n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "democaregiver",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "democaregiver",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "democaregiver5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "democaregiver",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/jwt-auth/v1/token",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"jwt-auth",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/caregivers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjE4MDI2OSwibmJmIjoxNjAyMTgwMjY5LCJleHAiOjE2MDI3ODUwNjksImRhdGEiOnsidXNlciI6eyJpZCI6NX19fQ.xOMnnIa5gRTP4zjz1ipFQC4tVL51sZXgcPac4tf52bI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/caregivers",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"caregivers"
+					],
+					"query": [
+						{
+							"key": "agency",
+							"value": "456",
+							"disabled": true
+						},
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/caregivers/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjI2MzYyOCwibmJmIjoxNjAyMjYzNjI4LCJleHAiOjE2MDI4Njg0MjgsImRhdGEiOnsidXNlciI6eyJpZCI6Nn19fQ.mdtRcY_IP4Ati7bRvqnkHfcvVI4Db6jZVClvXiHxRS0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/caregivers/me",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"caregivers",
+						"me"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/caregivers/6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjYxMDU1OSwibmJmIjoxNjAyNjEwNTU5LCJleHAiOjE2MDMyMTUzNTksImRhdGEiOnsidXNlciI6eyJpZCI6N319fQ.A9GidSrIEb6NB5Tq6uzD-oo3eckkfZBIe6zTsU7PUAg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/caregivers/6?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"caregivers",
+						"6"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/caregivers/6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjE4MDI2OSwibmJmIjoxNjAyMTgwMjY5LCJleHAiOjE2MDI3ODUwNjksImRhdGEiOnsidXNlciI6eyJpZCI6NX19fQ.xOMnnIa5gRTP4zjz1ipFQC4tVL51sZXgcPac4tf52bI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Angie\",\r\n    \"last_name\":\"Jewel\",\r\n    \"phone_number\":\"555-550-2232\",\r\n    \"courses\":257,\r\n    \"assignments\":[221,222]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/caregivers/6",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"caregivers",
+						"6"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/assignments/?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjYxMDU1OSwibmJmIjoxNjAyNjEwNTU5LCJleHAiOjE2MDMyMTUzNTksImRhdGEiOnsidXNlciI6eyJpZCI6N319fQ.A9GidSrIEb6NB5Tq6uzD-oo3eckkfZBIe6zTsU7PUAg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/assignments/?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"assignments",
+						""
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/assignments/4306?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjYxMDU1OSwibmJmIjoxNjAyNjEwNTU5LCJleHAiOjE2MDMyMTUzNTksImRhdGEiOnsidXNlciI6eyJpZCI6N319fQ.A9GidSrIEb6NB5Tq6uzD-oo3eckkfZBIe6zTsU7PUAg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/assignments/4306?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"assignments",
+						"4306"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/assignments/completed?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjYxMDU1OSwibmJmIjoxNjAyNjEwNTU5LCJleHAiOjE2MDMyMTUzNTksImRhdGEiOnsidXNlciI6eyJpZCI6N319fQ.A9GidSrIEb6NB5Tq6uzD-oo3eckkfZBIe6zTsU7PUAg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/assignments/completed?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"assignments",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/groups/4440?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY3Mjg3NiwibmJmIjoxNjAyNjcyODc2LCJleHAiOjE2MDMyNzc2NzYsImRhdGEiOnsidXNlciI6eyJpZCI6Nn19fQ.tO8aPqgs2RIFP5CyXziR__03bBfnrJ1kT4jYeIQ35lA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/groups/4440?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"groups",
+						"4440"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/groups/type/298?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY3MjAyMywibmJmIjoxNjAyNjcyMDIzLCJleHAiOjE2MDMyNzY4MjMsImRhdGEiOnsidXNlciI6eyJpZCI6N319fQ.Hn4s69_14g2FYmlwbYg_9A9kE4qkupvu4-NAIXcGNYY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/groups/type/298?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"groups",
+						"type",
+						"298"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/groups/course?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY3NzQ5NywibmJmIjoxNjAyNjc3NDk3LCJleHAiOjE2MDMyODIyOTcsImRhdGEiOnsidXNlciI6eyJpZCI6MTF9fX0.p72UssQNZZ3H-bVOE6rJhT-yWfyix4aHlV5ClQkhHrE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/groups/course?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"groups",
+						"course"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/groups/caregiver?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY3NzQ5NywibmJmIjoxNjAyNjc3NDk3LCJleHAiOjE2MDMyODIyOTcsImRhdGEiOnsidXNlciI6eyJpZCI6MTF9fX0.p72UssQNZZ3H-bVOE6rJhT-yWfyix4aHlV5ClQkhHrE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/groups/caregiver?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"groups",
+						"caregiver"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/agencies?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY5MzQxMiwibmJmIjoxNjAyNjkzNDEyLCJleHAiOjE2MDMyOTgyMTIsImRhdGEiOnsidXNlciI6eyJpZCI6MX19fQ.bZXZ9AcPCzlsBIuzzK_jd2jwZ3oFT6hdzNf4FBd53_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/agencies?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"agencies"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/agencies/250?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY5MzQxMiwibmJmIjoxNjAyNjkzNDEyLCJleHAiOjE2MDMyOTgyMTIsImRhdGEiOnsidXNlciI6eyJpZCI6MX19fQ.bZXZ9AcPCzlsBIuzzK_jd2jwZ3oFT6hdzNf4FBd53_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/agencies/250?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"agencies",
+						"250"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/users?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY5MzQxMiwibmJmIjoxNjAyNjkzNDEyLCJleHAiOjE2MDMyOTgyMTIsImRhdGEiOnsidXNlciI6eyJpZCI6MX19fQ.bZXZ9AcPCzlsBIuzzK_jd2jwZ3oFT6hdzNf4FBd53_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/users?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"users"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://192.168.0.223/wp-json/quire/v2/users/11?XDEBUG_SESSION_START=PHPSTORM",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMTkyLjE2OC4wLjIyMyIsImlhdCI6MTYwMjY5MzQxMiwibmJmIjoxNjAyNjkzNDEyLCJleHAiOjE2MDMyOTgyMTIsImRhdGEiOnsidXNlciI6eyJpZCI6MX19fQ.bZXZ9AcPCzlsBIuzzK_jd2jwZ3oFT6hdzNf4FBd53_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.0.223/wp-json/quire/v2/users/11?XDEBUG_SESSION_START=PHPSTORM",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"223"
+					],
+					"path": [
+						"wp-json",
+						"quire",
+						"v2",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
